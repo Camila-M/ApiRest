@@ -1,0 +1,8 @@
+version: '1'
+services:
+  api:
+    image: Camila-M/ApiRest
+    restart: unless-stopped
+    ports:
+      - 8080:80
+      - 8081:443
