@@ -30,6 +30,7 @@ namespace Supermarket.API
         public static IWebHost BuildWebHost(string[] args) =>
             WebHost.CreateDefaultBuilder(args)
             .UseStartup<Startup>()
+            .UseUrls("https://*:" + Environment.GetEnvironmentVariable("PORT"))
             .Build();
     }
 }
