@@ -31,7 +31,7 @@ namespace Supermarket.API
             WebHost.CreateDefaultBuilder(args)
             .UseStartup<Startup>()
             // Agrego esta linea comentada
-            .UseUrls("https://*:" + Environment.GetEnvironmentVariable("PORT"))
+            .UseUrls("http://*:" + Environment.GetEnvironmentVariable("PORT"))
             .Build();
     }
 }
