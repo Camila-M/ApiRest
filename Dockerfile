@@ -10,5 +10,4 @@ RUN dotnet publish ./src/Supermarket.API/Supermarket.API.csproj -c Release -o ou
 FROM mcr.microsoft.com/dotnet/core/aspnet:3.1
 WORKDIR /app
 COPY --from=builder /app/out .
-RUN dotnet dev-certs https --trust
 ENTRYPOINT ["dotnet", "Supermarket.API.dll"]
